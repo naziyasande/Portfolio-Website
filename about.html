@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naziya Sande</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 transalte-y-[80%]">
+        <img src="img/header-bg-color.png" class="w-full fade-in">
+    </div>
+    <div>
+        <nav class="w-full fixed px-5 lg:px-8 lg:px:[8%] py-4 flex items-center justify-between z-50 fade-in">
+            <img src="img/Naziya..-removebg-preview.png" alt="Logo" class="w-[18%] cursor-pointer mr-14 hover-grow">
+            <ul class="hidden md:flex items-center gap-6 lg:gap-8 
+                rounded-full px-10 py-3 bg-white shadow-sm bg-opacity-50">
+                <li>
+                    <a href="index.html" class="hover-grow">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="hover-grow">About Me</a>
+                </li>
+                <li>
+                    <a href="experience.html" class="hover-grow">Experience</a>
+                </li>
+                <li>
+                    <a href="projects.html" class="hover-grow">Projects</a>
+                </li>
+                <li>
+                    <a href="certification.html" class="hover-grow">Certifications</a>
+                </li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:flex items-center gap-3 
+            px-10 py-2.5 border border-gray-500 rounded-full ml-4 hover-grow">Contact Me<i class="fa-solid fa-phone"></i></a>
+
+                <button class="block md:hidden ml-3" onclick="openMenu()">
+                    <img src="img/menu-black.png" alt="" class="w-6">
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+
+            <ul id="sidemenu" class="flex md:hidden flex-col py-20 px-10 fixed gap-4
+            -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 slide-in">
+
+                <div class="absolute right-6 top-6" onclick="closeMenu()">
+                    <img src="img/close-black.png" class="w-5 cursor-pointer">
+
+                </div>
+                <li>
+                    <a href="index.html" onclick="closeMenu()">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" onclick="closeMenu()">About Me</a>
+                </li>
+                <li>
+                    <a href="experience.html" onclick="closeMenu()">Experience</a>
+                </li>
+                <li>
+                    <a href="projects.html" onclick="closeMenu()">Projects</a>
+                </li>
+                <li>
+                    <a href="certification.html" onclick="closeMenu()">Certifications</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+    <!--About Me-->
+
+    <div class="w-11/12 px-[12%] py-4 pt-5 pb-3 mb-5 fade-in">
+        <h4 class="text-center  mb-2 text-lg mt-20  font-mono">Introduction</h4>
+        <h2 class="text-center text-4xl mb-0 mt-4 font-serif font-bold">About Me </h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-2">
+            <div class="max-w-max mx-auto relative shadow-xl shadow-slate-400 rounded-3xl fade-in">
+                <img src="img/Myimg-removebg-preview (1).png" alt="my image "
+                    class="w-64 sm:w-80 rounded-3xl max-w-none hover-grow">
+            </div>
+            <div class="flex-1 mt-0 fade-in">
+                <p class="mb-8 max-w-2xl mt-2 gap-3">
+                    Passionate full stack developer with a strong background in both front-end and back-end
+                    technologies. Proficient in
+                    Python, Django, Flask and the MERN stack with hands-on experience in developing dynamic web
+                    applications. Excellent
+                    problem-solving, research, and collaboration abilities. Seeking a challenging role to develop
+                    innovative web and software
+                    solutions.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl mt-3">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff]
+                    hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] fade-in">
+                        <img src="img/code-icon.png" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">
+                            Languages
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            Html5, CSS, JavaScript, Python, C++, Sql
+                        </p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff]
+                    hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] fade-in">
+                        <img src="img/edu-icon.png" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">
+                            Education
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            B.E in Computer Engineering<br><br>
+                            CGPA: 9.23
+
+                        </p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff]
+                    hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] fade-in">
+                        <img src="img/project-icon.png" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">
+                            Projects
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            Built more than 7 projects
+                        </p>
+                    </li>
+                </ul>
+                <h4 class="my-5 text-gray-700">
+                    Libraries & Tools I use
+                </h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/Django.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/Nodejs.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/Mongo.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/Tailwind-removebg-preview.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/VS code.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer
+                    hover:-translate-y-1 duration-500 fade-in">
+                        <img src="img/Github.png" alt="" class="w-5 sm:w-32">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 
+mx-[10%] my-3 pb-8 pt-4 fade-in">
+        <p>naziyasande754@gmail.com &nbsp;© All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.linkedin.com/in/naziya-sande-014515249/" class="hover-grow">LinkedIn</a></li>
+            <li><a href="https://github.com/naziyasande" class="hover-grow">GithHub</a></li>
+            <li><a href="https://www.instagram.com/naaz_sande/" class="hover-grow">Instagram</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

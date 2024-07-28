@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naziya Sande</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[80%] fade-in">
+        <img src="img/header-bg-color.png" class="w-full">
+    </div>
+    <div>
+        <nav class="w-full fixed px-5 lg:px-8 lg:px:[8%] py-4 flex items-center justify-between z-50 fade-in">
+            <img src="img/Naziya..-removebg-preview.png" alt="Logo" class="w-[18%] cursor-pointer mr-14 hover-grow">
+            <ul class="hidden md:flex items-center gap-6 lg:gap-8 
+                rounded-full px-10 py-3 bg-white shadow-sm bg-opacity-50">
+                <li>
+                    <a href="index.html" class="hover-grow">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="hover-grow">About Me</a>
+                </li>
+                <li>
+                    <a href="experience.html" class="hover-grow">Experience</a>
+                </li>
+                <li>
+                    <a href="projects.html" class="hover-grow">Projects</a>
+                </li>
+                <li>
+                    <a href="certification.html" class="hover-grow">Certifications</a>
+                </li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:flex items-center gap-3 
+            px-10 py-2.5 border border-gray-500 rounded-full ml-4 hover-grow">Contact Me<i class="fa-solid fa-phone"></i></a>
+
+                <button class="block md:hidden ml-3" onclick="openMenu()">
+                    <img src="img/menu-black.png" alt="" class="w-6">
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+
+            <ul id="sidemenu" class="flex md:hidden flex-col py-20 px-10 fixed gap-4
+            -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 slide-in">
+
+                <div class="absolute right-6 top-6" onclick="closeMenu()">
+                    <img src="img/close-black.png" class="w-5 cursor-pointer">
+                </div>
+                <li>
+                    <a href="index.html" onclick="closeMenu()">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" onclick="closeMenu()">About Me</a>
+                </li>
+                <li>
+                    <a href="experience.html" onclick="closeMenu()">Experience</a>
+                </li>
+                <li>
+                    <a href="projects.html" onclick="closeMenu()">Projects</a>
+                </li>
+                <li>
+                    <a href="certification.html" onclick="closeMenu()">Certifications</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Certification -->
+
+    <div class="w-11/12 pl-36 pr-1 pt-8">
+        <h4 class="text-center mb-2 text-lg mt-20 ml-12 font-semibold fade-in">This Is My</h4>
+        <h2 class="text-center text-5xl mt-5 ml-12 font-serif fade-in">Recent Certifications</h2>
+
+        <div class="grid grid-cols-auto gap-14 my-8 sm:grid-cols-2 fade-in">
+            <!-- Certification Card 1 -->
+            <div class="relative group border border-gray-300 rounded-lg px-8 py-12 transition-transform duration-300 hover:shadow-lg hover:-translate-y-2 cursor-pointer glow zoom-in">
+                <img src="img/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20240216-29-osti88-1.png" alt="AWS Certification" class="w-full rounded-3xl transition-transform duration-300 group-hover:scale-105">
+            </div>
+
+            <!-- Certification Card 2 -->
+            <div class="relative group border border-gray-300 rounded-lg px-8 py-12 transition-transform duration-300 hover:shadow-lg hover:-translate-y-2 cursor-pointer glow zoom-in">
+                <img src="img/AWS_Academy_Graduate___AWS_Academy_Machine_Learning_Foundations_Badge20240222-45-uvgseq-1.png" alt="AWS Certification" class="w-full rounded-3xl transition-transform duration-300 group-hover:scale-105">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 
+    mx-[10%] my-3 pb-8 pt-4 fade-in">
+        <p>naziyasande754@gmail.com &nbsp;© All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.linkedin.com/in/naziya-sande-014515249/" class="hover-grow">LinkedIn</a></li>
+            <li><a href="https://github.com/naziyasande" class="hover-grow">GitHub</a></li>
+            <li><a href="https://www.instagram.com/naaz_sande/" class="hover-grow">Instagram</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

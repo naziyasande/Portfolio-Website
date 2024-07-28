@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naziya Sande</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 transalte-y-[80%]">
+        <img src="img/header-bg-color.png" class="w-full fade-in">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 lg:px:[8%] py-4 flex items-center justify-between z-50 fade-in">
+
+        <img src="img/Naziya..-removebg-preview.png" alt="Logo" class="w-[18%] cursor-pointer mr-14 hover-grow">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 
+            rounded-full px-10 py-3 bg-white shadow-sm bg-opacity-50">
+            <li>
+                <a href="index.html" class="hover-grow">Home</a>
+            </li>
+            <li>
+                <a href="about.html" class="hover-grow">About Me</a>
+            </li>
+            <li>
+                <a href="experience.html" class="hover-grow">Experience</a>
+            </li>
+            <li>
+                <a href="projects.html" class="hover-grow">Projects</a>
+            </li>
+            <li>
+                <a href="certification.html" class="hover-grow">Certifications</a>
+            </li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <a href="#contact" class="hidden lg:flex items-center gap-3 
+        px-10 py-2.5 border border-gray-500 rounded-full ml-4 hover-grow">Contact Me<i class="fa-solid fa-phone"></i></a>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="img/menu-black.png" alt="" class="w-6">
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+
+        <ul id="sidemenu" class="flex md:hidden flex-col py-20 px-10 fixed gap-4
+        -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 slide-in">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="img/close-black.png" class="w-5 cursor-pointer">
+
+            </div>
+            <li>
+                <a href="index.html" onclick="closeMenu()">Home</a>
+            </li>
+            <li>
+                <a href="about.html" onclick="closeMenu()">About Me</a>
+            </li>
+            <li>
+                <a href="experience.html" onclick="closeMenu()">Experience</a>
+            </li>
+            <li>
+                <a href="projects.html" onclick="closeMenu()">Projects</a>
+            </li>
+            <li>
+                <a href="certification.html" onclick="closeMenu()">Certifications</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!--Header Part -->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 fade-in">
+        <img src="img/Profile1-removebg-preview (1).png" class="rounded-full w-36 mb-3 hover-grow">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+            Hii, I'm Naziya Sande <img src="img/hand-icon.png" class="w-6"></h3>
+
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-serif mb-3">
+            A Full-Stack Developer !! </h1>
+
+        <p class="max-w-2xl mx-auto font-mono">
+            Proficient in Python, Django, Flask and the MERN stack with hands-on experience in developing dynamic web
+            applications.</p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="Naziya_Sande_Resume_2024.pdf" download class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] 
+                text-white flex items-center gap-2 font-bold hover-grow"> My Resume <i class="fa-solid fa-download"></i> </a>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
